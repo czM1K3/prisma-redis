@@ -19,8 +19,7 @@ export const createPrismaRedisCache = (model: string[], cacheTime: number, redis
 				await redis.setex(cacheKey, cacheTime, stringify(result));
 			}
 			return result;
-		}
-		else {
+		} else {
 			return await next(params);
 		}
 	}

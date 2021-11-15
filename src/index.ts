@@ -10,11 +10,9 @@ export const createPrismaRedisCache = (model: string[], cacheTime: number, redis
 				cacheMethods ? cacheMethods.includes(params.actions) : ["findUnique", "findFirst", "findMany", "queryRaw", "aggregate", "count", "groupBy"].includes(params.action)
 		) {
 			const args = stringify(params.args);
-
 			const cacheKey = `${params.model}_${params.action}_${args}`;
 
 			let result = parse((await redis.get(cacheKey))!);
-
 
 			if (!result) {
 				result = await next(params);

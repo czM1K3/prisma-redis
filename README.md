@@ -1,16 +1,16 @@
 # prisma-redis
 
-This package is middleware for Prisma that caches requests to Redis.
-Based on the work done by @Asjas on [prisma-redis-middleware](https://github.com/Asjas/prisma-redis-middleware)
+This package is a middleware for Prisma that caches its requests to a Redis database.
+Based on the work done by [@Asjas](https://github.com/Asjas) on [prisma-redis-middleware](https://github.com/Asjas/prisma-redis-middleware)
 
-This package requires [ioredis](https://www.npmjs.com/package/ioredis)
+This package requires [ioredis](https://www.npmjs.com/package/ioredis).
 
 ## Installation
 ```bash
 npm i prisma-redis
 ```
 or
-```base
+```bash
 yarn add prisma-redis
 ```
 
@@ -27,4 +27,4 @@ prisma.$use(createPrismaRedisCache(["Objects","to","cache"], 60, redis));
 
 ...
 ```
-In 4th argument you can define which command to cache.
+In the 4th argument you can define which commands to cache.

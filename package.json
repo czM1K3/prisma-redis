@@ -1,0 +1,28 @@
+{
+  "name": "prisma-redis",
+  "version": "1.0.0",
+  "description": "Middleware that caches Prisma requests to Redis",
+  "main": "dest/index.js",
+  "types": "dest",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czM1K3/prisma-redis.git"
+  },
+  "author": "czm1k3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/czM1K3/prisma-redis/issues"
+  },
+  "homepage": "https://github.com/czM1K3/prisma-redis#readme",
+  "devDependencies": {
+    "@types/ioredis": "^4.28.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "ioredis": "^4.28.0",
+    "telejson": "^5.3.3"
+  }
+}

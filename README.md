@@ -27,4 +27,4 @@ prisma.$use(createPrismaRedisCache(["Objects","to","cache"], 60, redis));
 
 ...
 ```
-In the 4th argument you can define which commands to cache.
+In the 4th argument you can define object with property 'include' or 'exclude'. That property is an array of these strings: "findUnique", "findFirst", "findMany", "queryRaw", "aggregate", "count" and "groupBy". By default all of the above are cached. Include overrides all and cached are only the ones you include. Exclude excludes only the ones you exclude.

@@ -1,6 +1,6 @@
 {
   "name": "prisma-redis",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Middleware that caches Prisma requests to Redis",
   "main": "dest/index.js",
   "types": "dest",
